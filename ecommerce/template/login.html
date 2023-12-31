@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Login Here</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">UserName</label>
+        <input type="text" class="form-control" name="username" placeholder="Enter the Username">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Enter the password">
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="form-control">
+    </div>
+</form>
+
+{% if messages %}
+{% for i in messages %}
+<ul>
+    <li style="color:red;">{{i}}</li>
+</ul>
+{% endfor %}
+{% endif %}
+{% endblock %}

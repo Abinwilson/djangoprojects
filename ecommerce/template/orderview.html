@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid mt-5" style="margin-bottom:50px;">
+    <h2 class="text-center pb-5">Customer Name :{{u}}</h2>
+        <h4 class="text-center pb-5" style="text-decoration:underline;">Order Details</h4>
+
+    {% for i in o %}
+    <div class="row pb-5">
+        <div class="col-md-3 my-3 border border-2 border-secondary">
+           <center> <img src="{{i.product.image.url}}" height="200px" width="200px"></center>
+        </div>
+        <div class="col-md-7 my-3 border border-2 border-secondary">
+            <b>Order Address :{{i.address}}</b><br>
+            <b>Customer Phone :{{i.phone}}</b><br>
+            <b>Product Name :{{i.product}}</b><br>
+            <b>Product Price :{{i.product.price}}</b><br>
+            <b>Product Quantity :{{i.no_of_items}}</b><br>
+            <b>Ordered On :{{i.date_ordered}}</b><br>
+            <b>Order Status:{{i.order_status}}</b><br>
+            <b>Delivery Status :<span class="text-danger">{{i.delivery_status}}</span></b><br>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

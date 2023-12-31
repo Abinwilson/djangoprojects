@@ -1,0 +1,22 @@
+body{
+background-color:#029ef7;
+font-family: 'Bitter', serif;}
+
+.nav-link .navbar-light .navbar-nav{
+color:black;
+}
+
+.footer{
+height:50px;
+width:100%;
+background-color:white;
+position:fixed;
+bottom:0;
+left:0;
+text-align:center;
+font-weight:bold;
+padding-top:17px;
+}
+
+.table-bordered
+{border-width:4px;}
